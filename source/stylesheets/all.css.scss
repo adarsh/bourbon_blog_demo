@@ -4,6 +4,7 @@
 @import "bitters/bitters";
 @import "neat";
 
+//Removes browser default margins from body.
 body {
   margin: 0;
 }
@@ -11,21 +12,32 @@ body {
 header {
   background: $dark-gray;
   height: auto;
-  margin-bottom: 1em;
   padding: 1em;
   width: 100%;
 
-  h1 {
+  h1, h5 {
     color: #fff;
+    display: inline-block;
+    // vertical-align: middle;
+  }
+
+  h5 {
+    font-weight: normal;
+    float: right;
   }
 }
 
+/* Centers the element in the viewport, clears its floats, and sets its max-width.
+http://neat.bourbon.io/docs/#outer-container */
+
 section {
   @include outer-container;
+  position: relative;
 }
 
 .posts {
   h2 {
+    @include span-columns(10);
     border-bottom: 1px solid $light-gray;
     padding-bottom: .5em;
   }
@@ -35,15 +47,20 @@ section {
   }
 }
 
-.column-wrap {
-  @include span-columns(4);
-  @include omega(3n);
+.sidebar {
+  @include span-columns(2);
   background: lighten($light-gray, 10);
   padding: 1em;
 
-  h2 {
+  h4 {
     border-bottom: 1px solid $light-gray;
     padding-bottom: .5em;
+  }
+
+  ol {
+    li {
+      margin: .5em 0;
+    }
   }
 }
 

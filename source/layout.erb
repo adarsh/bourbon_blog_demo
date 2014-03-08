@@ -10,43 +10,16 @@
   <body>
 
     <header>
-      <h1>Bourbon Demo Blog</h1>
+      <h1>Demo Blog</h1>
+      <h5>All about cats</h5>
     </header>
+    <%= partial "sidebar" %>
+
     <div id="main" role="main">
       <section class="posts">
         <%= yield %>
       </section>
     </div>
 
-    <section>
-      <aside>
-        <div class="column-wrap">
-          <h2>Recent Articles</h2>
-          <ol>
-            <% blog.articles[0...10].each do |article| %>
-              <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-            <% end %>
-          </ol>
-        </div>
-
-        <div class="column-wrap">
-          <h2>Tags</h2>
-          <ol>
-            <% blog.tags.each do |tag, articles| %>
-              <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-            <% end %>
-          </ol>
-        </div>
-
-        <div class="column-wrap">
-          <h2>By Year</h2>
-          <ol>
-            <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-              <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-            <% end %>
-          </ol>
-        </div>
-      </aside>
-    </section>
   </body>
 </html>
