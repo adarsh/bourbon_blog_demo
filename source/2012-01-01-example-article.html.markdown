@@ -5,4 +5,7 @@ tags: example
 ---
 
 **CAT**
-![Cats](http://upload.wikimedia.org/wikipedia/commons/2/22/Turkish_Van_Cat.jpg)
+
+<div class="image">
+  <img src="http://upload.wikimedia.org/wikipedia/commons/2/22/Turkish_Van_Cat.jpg">
+</div>

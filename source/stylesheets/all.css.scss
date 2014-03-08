@@ -3,3 +3,48 @@
 @import "bourbon";
 @import "bitters/bitters";
 @import "neat";
+
+body {
+  margin: 0;
+}
+
+header {
+  background: $dark-gray;
+  height: auto;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 100%;
+
+  h1 {
+    color: #fff;
+  }
+}
+
+section {
+  @include outer-container;
+}
+
+.posts {
+  h2 {
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: .5em;
+  }
+
+  .image {
+    @include span-columns(3);
+  }
+}
+
+.column-wrap {
+  @include span-columns(4);
+  @include omega(3n);
+  background: lighten($light-gray, 10);
+  padding: 1em;
+
+  h2 {
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: .5em;
+  }
+}
+
+
