@@ -9,21 +9,35 @@ body {
   margin: 0;
 }
 
+.pull-right {
+  float: right;
+}
+
 header {
   background: $dark-gray;
+  color: #fff;
   height: auto;
   padding: 1em;
   width: 100%;
+  overflow: hidden;
 
-  h1, h5 {
-    color: #fff;
+  h1 {
     display: inline-block;
-    // vertical-align: middle;
+    float: left;
   }
 
-  h5 {
-    font-weight: normal;
+  ul {
+    list-style: none;
+    text-align: right;
+    display: inline-block;
     float: right;
+
+    li {
+      color: #fff;
+      display: inline-block;
+      line-height: 3;
+      width: 300px;
+    }
   }
 }
 
