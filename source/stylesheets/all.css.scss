@@ -51,15 +51,20 @@ section {
 
 .post-wrap {
   @include clearfix;
-  @include span-columns(10);
-  @include shift(1);
+  @include span-columns(12);
+  @include transition(all .2s linear);
   margin-bottom: 2em;
+  padding: 2em;
+
+  &:hover {
+    background: lighten($blue, 44);
+  }
 }
 
 .posts {
 
-  h2 {
-    border-bottom: 1px solid $light-gray;
+  h3 {
+    border-bottom: 2px solid $light-gray;
     padding-bottom: .5em;
   }
 
@@ -68,8 +73,12 @@ section {
   }
 
   .image {
-    @include span-columns(3);
+    @include span-columns(7);
     border-radius: 5px;
+
+    img {
+      @include fill-parent;
+    }
   }
 }
 
@@ -84,6 +93,7 @@ footer {
   border-top: 1px solid $light-gray;
   margin-top: 5em;
   padding: 1em;
+  overflow: hidden;
   height: auto;
   width: 100%;
 

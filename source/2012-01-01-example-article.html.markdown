@@ -1,13 +1,13 @@
 ---
 title: Example Article
 date: 2012-01-01
-tags: example
+tags: arrested development
 ---
 
-**My New Blog Post**
+##My New Blog Post
 
 <div class="image">
-  <img src="http://upload.wikimedia.org/wikipedia/commons/2/22/Turkish_Van_Cat.jpg">
+  <img src="http://goo.gl/PS87XV">
 </div>
 
 You're Killing Me, Buster. Yeah, well, have you seen the new Mustang? You could hump that hood. The worst that could happen is that I could spill coffee all over this $3,000 suit. COME ON.
