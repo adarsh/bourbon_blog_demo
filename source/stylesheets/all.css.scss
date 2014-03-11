@@ -63,9 +63,17 @@ section {
 
 .posts {
 
-  h3 {
+  h5 {
     border-bottom: 2px solid $light-gray;
+    font-weight: 300;
     padding-bottom: .5em;
+  }
+}
+
+.post-body {
+
+  h2 {
+    margin: 1em 0;
   }
 
   p {
@@ -86,6 +94,7 @@ section {
   @include span-columns(4);
   @include omega(3n);
   padding: .5em;
+  border-right: 1px solid $light-gray;
 }
 
 footer {
