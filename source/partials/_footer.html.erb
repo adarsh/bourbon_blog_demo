@@ -4,7 +4,10 @@
       <h4>Recent Articles</h4>
       <ol>
         <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+          <li>
+            <%= link_to article.title, article %>
+            <span><%= article.date.strftime('%b %e') %></span>
+          </li>
         <% end %>
       </ol>
     </div>
@@ -13,7 +16,9 @@
       <h4>Tags</h4>
       <ol>
         <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+          <li>
+            <%= link_to "#{tag} (#{articles.size})", tag_path(tag) %>
+          </li>
         <% end %>
       </ol>
     </div>
@@ -22,8 +27,20 @@
       <h4>By Year</h4>
       <ol>
         <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+          <li>
+            <%= link_to "#{year} (#{articles.size})", blog_year_path(year) %>
+          </li>
         <% end %>
+      </ol>
+    </div>
+    <div class="col-three">
+      <h4>By Author</h4>
+      <ol>
+        <%# <% blog.authors.each do |author, articles| %>
+        <%#   <li>
+        <%#     <%= link_to "#{authors} (#{articles.size})", author_path(author) %>
+        <%#   </li>
+        <%# <% end %>
       </ol>
     </div>
   </section>

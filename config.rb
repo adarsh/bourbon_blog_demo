@@ -5,6 +5,7 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
+activate :authors
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 

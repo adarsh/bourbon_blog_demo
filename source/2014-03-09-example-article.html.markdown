@@ -2,6 +2,7 @@
 title: Mission Accomplished
 date: 2014-03-09
 tags: arrested development, ann
+authors: Jane Doe
 ---
 
 #Mission Accomplished
