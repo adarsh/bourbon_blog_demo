@@ -15,10 +15,6 @@ body {
   margin: 0;
 }
 
-.pull-right {
-  float: right;
-}
-
 /* Centers the element in the viewport, clears its floats, and sets its max-width.
 http://neat.bourbon.io/docs/#outer-container */
 
@@ -26,10 +22,15 @@ section {
   @include outer-container;
 }
 
-//Structural helper for a three-column layout. We'll use this in the foooter and possibly other places.
+/*Structural helper for a three-column layout. We'll use this in the foooter and possibly other places.*/
+
 .col-three {
   @include span-columns(4);
   @include omega(3n);
+}
+
+.image {
+  margin: 1em 0;
 }
 
 //Global header for the blog.
@@ -81,33 +82,35 @@ header {
 }
 
 ul.posts {
+
+  li.post {
+    @include span-columns(12);
+    border-bottom: 1px solid $light-gray;
+    padding: .5em 0;
+  }
 }
 
 .post-wrap {
-  @include span-columns(12);
   @include transition(all .2s linear);
-  padding: 2em;
-  border-bottom: 1px solid $light-gray;
+  padding: 1em;
 
   &:hover {
     background: lighten($blue, 44);
   }
 
   h1 {
-    font-size: 1.7em;
     font-weight: 500;
     display: inline-block;
   }
 
   h5 {
-    display: inline-block;
-    font-size: 1.3em;
+    color: $light-font-color;
     font-weight: 300;
-    padding-bottom: .5em;
   }
 }
 
 //Styles the way the blog posts appear on the index page.
+
 
 .post-body {
 
@@ -115,8 +118,6 @@ ul.posts {
     display: none;
     font-size: 1.2em;
   }
-
-
 
   p {
     margin: 1em 0;
