@@ -1,8 +1,12 @@
 @charset "utf-8";
 
+//Libraries
 @import "bourbon";
 @import "bitters/bitters";
 @import "neat";
+
+//Custom styles
+@import "partials/header";
 
 //Smooths appearance of text
 html, html a {
@@ -25,64 +29,14 @@ section {
 /*Structural helper for a three-column layout. We'll use this in the foooter and possibly other places.*/
 
 .col-three {
-  @include span-columns(4);
-  @include omega(3n);
+  @include span-columns(3);
+  @include omega(4n);
 }
 
 .image {
   margin: 1em 0;
 }
 
-//Global header for the blog.
-header {
-  background: $dark-gray;
-  height: auto;
-  margin-bottom: 4em;
-  width: 100%;
-
-  section {
-    padding: 1em 0;
-  }
-
-  .blog-title {
-    @include transition(all, .15s, linear);
-    display: inline-block;
-    float: left;
-    font-size: 2em;
-    font-weight: 300;
-    color: #fff;
-
-    &:hover {
-      color: $light-gray;
-    }
-  }
-
-  ul {
-    display: inline-block;
-    float: right;
-    list-style: none;
-    text-align: right;
-
-    li {
-      display: inline-block;
-      font-size: 1em;
-      width: auto;
-
-      a {
-        border-radius: 9px;
-        border: 1px solid rgba(#fff, .5);
-        color: rgba(#fff, .5);
-        margin: 0;
-        padding: .4em 1em;
-
-        &:hover {
-          background: rgba(#fff, .2);
-          color: #fff;
-        }
-      }
-    }
-  }
-}
 
 ul.posts {
 
@@ -115,7 +69,6 @@ ul.posts {
 }
 
 //Styles the way the blog posts appear on the index page.
-
 
 .post-body {
 
@@ -161,63 +114,6 @@ footer {
   ol {
     li {
       margin: 1em 0;
-    }
-  }
-}
-
-$image-gradient-color-top: white;
-$transparency-top: .6;
-$image-gradient-color-bottom: black;
-$transparency-bottom: .6;
-$vertical-angle: 180deg;
-
-$image-gradient-color-left: black;
-$transparency-left: .9;
-$image-gradient-color-right: black;
-$transparency-right: .8;
-$horizontal-angle: 90deg;
-
-.image-gradient {
-  background: url(http://goo.gl/SGztfO);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  padding: 20em;
-  position: relative;
-  width: 100%;
-  display: table;
-  margin-bottom: $base-line-height;
-
-  .copy {
-    position: absolute;
-    left: 50%;
-    margin: auto;
-    z-index: 999;
-    top: 40%;
-    text-align: center;
-
-    p {
-      padding: 1em 2em;
-      position: relative;
-      left: -50%;
-      color: white;
-      font-weight: 800;
-      background-color: transparentize(black, .6);
-    }
-  }
-
-  .overlay {
-    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
-    transparentize($image-gradient-color-bottom, $transparency-bottom));
-    display: block;
-    @include position(absolute, 0px 0px 0px 0px);
-
-    &:after {
-      content: '';
-      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-      transparentize($image-gradient-color-right, $transparency-right));
-      display: block;
-      @include position(absolute, 0px 0px 0px 0px);
     }
   }
 }
