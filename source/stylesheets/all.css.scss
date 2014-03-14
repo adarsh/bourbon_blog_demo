@@ -7,6 +7,8 @@
 
 //Custom styles
 @import "partials/header";
+@import "partials/footer";
+@import "partials/index";
 
 //Smooths appearance of text
 html, html a {
@@ -26,49 +28,20 @@ section {
   @include outer-container;
 }
 
-/*Structural helper for a three-column layout. We'll use this in the foooter and possibly other places.*/
+/*Structural helper for a four-column element layout. We'll use this in the foooter and possibly other places.
 
-.col-three {
+Uses Neat span-columns to specify the number of columns an element should span.
+*/
+
+.col-four {
   @include span-columns(3);
-  @include omega(4n);
 }
+
+/* Styles for elements in blog posts */
 
 .image {
   margin: 1em 0;
 }
-
-
-ul.posts {
-
-  li.post {
-    @include span-columns(12);
-    border-bottom: 1px solid $light-gray;
-    padding: .5em 0;
-  }
-}
-
-.post-wrap {
-  @include transition(all .2s linear);
-  padding: 1em;
-
-  &:hover {
-    background: lighten($blue, 44);
-  }
-
-  h1 {
-    margin-bottom: 0;
-    display: inline-block;
-    font-size: 1.65em;
-    font-weight: 500;
-  }
-
-  h5 {
-    color: $light-font-color;
-    font-weight: 300;
-  }
-}
-
-//Styles the way the blog posts appear on the index page.
 
 .post-body {
 
@@ -83,37 +56,5 @@ ul.posts {
 
   .image {
     display: none;
-  }
-}
-
-footer {
-  background: lighten($light-gray, 10);
-  border-top: 1px solid $light-gray;
-  margin-top: 5em;
-  padding: 1em;
-  overflow: hidden;
-  height: auto;
-  width: 100%;
-
-  .col-three {
-    padding: .5em;
-    border-right: 1px solid $light-gray;
-    min-height: 300px;
-
-    &:last-child {
-      border-right: none;
-    }
-  }
-
-  h4 {
-    font-size: 1.4em;
-    font-weight: 300;
-    padding-bottom: .5em;
-  }
-
-  ol {
-    li {
-      margin: 1em 0;
-    }
   }
 }

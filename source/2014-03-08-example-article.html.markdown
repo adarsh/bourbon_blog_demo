@@ -2,6 +2,7 @@
 title: Operation Hot Mother
 date: 2014-03-08
 tags: arrested development, michael, buster
+authors: John Doe
 ---
 
 #Operation Hot Mother

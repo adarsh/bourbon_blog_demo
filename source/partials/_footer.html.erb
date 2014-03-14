@@ -1,18 +1,18 @@
 <footer>
   <section>
-    <div class="col-three">
+    <div class="col-four">
       <h4>Recent Articles</h4>
       <ol>
         <% blog.articles[0...10].each do |article| %>
           <li>
+            <%= article.date.strftime('%b %e') %>
             <%= link_to article.title, article %>
-            <span><%= article.date.strftime('%b %e') %></span>
           </li>
         <% end %>
       </ol>
     </div>
 
-    <div class="col-three">
+    <div class="col-four">
       <h4>Tags</h4>
       <ol>
         <% blog.tags.each do |tag, articles| %>
@@ -23,7 +23,7 @@
       </ol>
     </div>
 
-    <div class="col-three">
+    <div class="col-four">
       <h4>By Year</h4>
       <ol>
         <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
@@ -33,7 +33,7 @@
         <% end %>
       </ol>
     </div>
-    <div class="col-three">
+    <div class="col-four">
       <h4>By Author</h4>
       <ol>
         <%# <% blog.authors.each do |author, articles| %>

@@ -1,0 +1,31 @@
+//Styles the way the blog posts list appears on the index page.
+
+ul.posts {
+
+  li.post {
+    @include span-columns(12);
+    border-bottom: 1px solid $light-gray;
+    padding: .5em 0;
+  }
+}
+
+.post-wrap {
+  @include transition(all .2s linear);
+  padding: 1em;
+
+  &:hover {
+    background: lighten($blue, 44);
+  }
+
+  h1 {
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 1.65em;
+    font-weight: 500;
+  }
+
+  h5 {
+    color: $light-font-color;
+    font-weight: 300;
+  }
+}

@@ -2,6 +2,7 @@
 title: Example Article
 date: 2012-01-01
 tags: arrested development, Franklin
+authors: Jane Doe
 ---
 
 #My New Blog Post
