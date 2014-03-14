@@ -1,10 +1,10 @@
 ---
 title: Operation Hot Mother
 date: 2014-03-08
-tags: example
+tags: arrested development, michael, buster
 ---
 
-##Operation Hot Mother
+#Operation Hot Mother
 
 <div class="image">
   <img src="http://goo.gl/c58fsg">

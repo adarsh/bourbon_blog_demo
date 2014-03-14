@@ -1,10 +1,10 @@
 ---
-title: Example Article
+title: Mission Accomplished
 date: 2014-03-09
-tags: example
+tags: arrested development, ann
 ---
 
-##Mayonegg
+#Mission Accomplished
 
 <div class="image"><img src="http://goo.gl/KAXA3"></div>
 

@@ -26,14 +26,19 @@ section {
   @include outer-container;
 }
 
+//Structural helper for a three-column layout. We'll use this in the foooter and possibly other places.
+.col-three {
+  @include span-columns(4);
+  @include omega(3n);
+}
+
+//Global header for the blog.
 header {
   background: $dark-gray;
-  color: #fff;
   height: auto;
-  padding: 1em;
   margin-bottom: 4em;
+  padding: 1em;
   width: 100%;
-  overflow: hidden;
 
   .blog-title {
     @include transition(all, .15s, linear);
@@ -49,10 +54,10 @@ header {
   }
 
   ul {
-    list-style: none;
-    text-align: right;
     display: inline-block;
     float: right;
+    list-style: none;
+    text-align: right;
 
     li {
       display: inline-block;
@@ -75,53 +80,51 @@ header {
   }
 }
 
+ul.posts {
+}
 
 .post-wrap {
-  @include clearfix;
   @include span-columns(12);
   @include transition(all .2s linear);
-  margin-bottom: 2em;
   padding: 2em;
+  border-bottom: 1px solid $light-gray;
 
   &:hover {
     background: lighten($blue, 44);
   }
-}
 
-.posts {
+  h1 {
+    font-size: 1.7em;
+    font-weight: 500;
+    display: inline-block;
+  }
 
   h5 {
-    border-bottom: 2px solid $light-gray;
-    font-size: 1em;
+    display: inline-block;
+    font-size: 1.3em;
     font-weight: 300;
     padding-bottom: .5em;
-    text-align: right;
   }
 }
+
+//Styles the way the blog posts appear on the index page.
 
 .post-body {
 
-  h2 {
-    margin: 1em 0;
+  h1 {
+    display: none;
+    font-size: 1.2em;
   }
+
+
 
   p {
     margin: 1em 0;
   }
 
   .image {
-    @include span-columns(7);
-    border-radius: 5px;
-
-    img {
-      @include fill-parent;
-    }
+    display: none;
   }
-}
-
-.col-three {
-  @include span-columns(4);
-  @include omega(3n);
 }
 
 footer {

@@ -1,10 +1,10 @@
 ---
-title: Example Article
+title: My New Blog Post
 date: 2014-03-07
-tags: example
+tags: buster, suit
 ---
 
-##My New Blog Post
+#My New Blog Post
 
 <div class="image">
   <img src="http://goo.gl/zam2RE">
