@@ -28,13 +28,13 @@ section {
   @include outer-container;
 }
 
-/*Structural helper for a four-column element layout. We'll use this in the foooter and possibly other places.
+/*Structural helper for a three-column element layout. We'll use this in the foooter and possibly other places.
 
 Uses Neat span-columns to specify the number of columns an element should span.
 */
 
-.col-four {
-  @include span-columns(3);
+.col-three {
+  @include span-columns(4);
 }
 
 /* Styles for elements in blog posts */
@@ -43,18 +43,3 @@ Uses Neat span-columns to specify the number of columns an element should span.
   margin: 1em 0;
 }
 
-.post-body {
-
-  h1 {
-    display: none;
-    font-size: 1.2em;
-  }
-
-  p {
-    margin: 1em 0;
-  }
-
-  .image {
-    display: none;
-  }
-}

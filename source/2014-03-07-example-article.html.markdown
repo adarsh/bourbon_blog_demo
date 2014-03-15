@@ -2,7 +2,6 @@
 title: My New Blog Post
 date: 2014-03-07
 tags: buster, suit
-authors: John Doe
 ---
 
 #My New Blog Post

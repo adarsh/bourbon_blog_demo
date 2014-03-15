@@ -29,3 +29,20 @@ ul.posts {
     font-weight: 300;
   }
 }
+
+//Styles the appearance of the blog summary on the index page.
+.post-body {
+
+  h1, h4 {
+    display: none;
+    font-size: 1.2em;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  .image {
+    display: none;
+  }
+}
