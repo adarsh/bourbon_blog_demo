@@ -5,7 +5,6 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
-activate :authors
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
@@ -25,9 +24,9 @@ activate :authors
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+  blog.paginate = true
+  blog.per_page = 8
+  blog.page_link = "page/{num}"
 end
 
 page "/feed.xml", layout: false

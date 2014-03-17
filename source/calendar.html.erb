@@ -20,13 +20,17 @@ pageable: true
   <% end %>
 <% end %>
 
-<ul>
+<ul class="posts">
   <% page_articles.each_with_index do |article, i| %>
-    <li>
-      <%= link_to article.title, article %>
-      <span>
-        <%= article.date.strftime('%b %e') %>
-      </span>
+    <li class="post">
+      <div class="post-wrap">
+        <h1>
+          <%= link_to article.title, article %>
+        </h1>
+        <h5>
+          <%= article.date.strftime('%b %e') %>
+        </h5>
+      </div>
     </li>
   <% end %>
 </ul>

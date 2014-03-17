@@ -1,13 +1,13 @@
-//Global header for the blog.
+//Global navigation for the blog.
 
-header {
+nav {
   background: $dark-gray;
   height: auto;
-  margin-bottom: 4em;
   width: 100%;
 
   section {
     padding: 1em 0;
+    margin-top: 0;
   }
 
   .blog-title {
@@ -52,17 +52,7 @@ header {
 
 /* Styles from thoughtbot refills "Image Gradient Overlay" http://thoughtbot.github.io/refills. Defines styles for the header image on the index page. */
 
-$image-gradient-color-top: white;
-$transparency-top: .6;
-$image-gradient-color-bottom: black;
-$transparency-bottom: .6;
-$vertical-angle: 180deg;
-
-$image-gradient-color-left: black;
-$transparency-left: .9;
-$image-gradient-color-right: black;
-$transparency-right: .8;
-$horizontal-angle: 90deg;
+//Sets the header background image and positioning.
 
 .image-gradient {
   background: url(http://goo.gl/SGztfO);
@@ -76,33 +66,36 @@ $horizontal-angle: 90deg;
   margin-bottom: $base-line-height;
 
   .copy {
-    position: absolute;
     left: 50%;
     margin: auto;
-    z-index: 999;
-    top: 40%;
+    position: absolute;
     text-align: center;
+    top: 40%;
+    z-index: 999;
 
     p {
+      background-color: transparentize(black, .6);
+      border-radius: 10px;
+      color: white;
+      font-size: 1.4em;
+      font-weight: 300;
+      left: -50%;
+      letter-spacing: .5px;
       padding: 1em 2em;
       position: relative;
-      left: -50%;
-      color: white;
-      font-weight: 800;
-      background-color: transparentize(black, .6);
     }
   }
 
   .overlay {
-    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
-    transparentize($image-gradient-color-bottom, $transparency-bottom));
+    @include linear-gradient(180deg, transparentize(#fff, .7),
+    transparentize($dark-gray, .6));
     display: block;
     @include position(absolute, 0px 0px 0px 0px);
 
     &:after {
       content: '';
-      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-      transparentize($image-gradient-color-right, $transparency-right));
+      @include linear-gradient(90deg, transparentize($dark-gray, .9),
+      transparentize($dark-gray, .8));
       display: block;
       @include position(absolute, 0px 0px 0px 0px);
     }

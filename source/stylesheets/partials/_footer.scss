@@ -7,10 +7,12 @@ footer {
   height: auto;
   width: 100%;
 
+  section {
+    margin-top: 0;
+  }
+
   .col-three {
     padding: .5em;
-    border-right: 1px solid $light-gray;
-    min-height: 300px;
 
     &:last-child {
       border-right: none;
@@ -21,11 +23,12 @@ footer {
     font-size: 1.4em;
     font-weight: 300;
     padding-bottom: .5em;
+    border-bottom: 1px solid $light-gray;
   }
 
   ol {
     li {
-      margin: 1em 0;
+      margin: .3em 0;
     }
   }
 }

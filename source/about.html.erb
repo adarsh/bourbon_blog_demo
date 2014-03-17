@@ -1,0 +1,75 @@
+---
+layout: layout
+---
+
+<h1>
+  About My Demo Blog
+</h1>
+
+<h2>
+  Ingredients
+</h2>
+
+<ul class="accordion-menus">
+  <li>
+    <a href="#" class="js-accordion-trigger">Middleman</a>
+    <div class="submenu">
+        <p>
+          Middleman is a command-line tool for creating static websites using
+          all the shortcuts and tools of the modern web development environment.
+        </p>
+        <a href="http://middlemanapp.com/">Middlemanapp.com</a>
+    </div>
+  </li>
+  <li>
+    <a href="#" class="js-accordion-trigger">Bourbon</a>
+    <div class="submenu">
+      <p>
+        Bourbon is a comprehensive library of sass mixins that are designed to
+        be simple and easy to use. No configuration required.
+      </p>
+        <a href="http://bourbon.io/">Bourbon</a>
+    </div>
+  </li>
+  <li>
+    <a href="#" class="js-accordion-trigger">Neat</a>
+    <div class="submenu">
+        <p>
+          Neat is a semantic grid framework built on top of Sass and Bourbon.
+          It is simple enough to get you up and running in minutes, and powerful enough
+          to handle any responsive layout you can dream of.
+        </p>
+        <a href="http://middlemanapp.com/">Middlemanapp.com</a>
+    </div>
+  </li>
+  <li>
+    <a href="#" class="js-accordion-trigger">Bitters</a>
+    <div class="submenu">
+        <p>
+          Scaffold styles, variables and structure for Bourbon projects.
+          Bitters helps designers start projects faster by defining
+          a basic set of variables and project structure.
+        </p>
+        <a href="http://bitters.bourbon.io/">Bitters</a>
+    </div>
+  </li>
+  <li>
+    <a href="#" class="js-accordion-trigger">Refills</a>
+    <div class="submenu">
+      <p>
+        Refills are prepackaged patterns and compontents, built ontop of
+        Bourbon, Bitters, and Neat.
+        </p>
+        <a href="http://thoughtbot.github.io/refills/#">Refills</a>
+    </div>
+  </li>
+</ul>
+
+<script>
+  jQuery('.js-accordion-trigger') // find the trigger
+    .bind('click focus', function(){
+      jQuery(this).parent().find('div').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().toggleClass('is-expanded');
+      event.preventDefault();
+  });
+</script>
