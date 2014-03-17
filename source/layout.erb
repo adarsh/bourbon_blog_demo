@@ -5,6 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
 
+    <!--
+        Here is a great reference on summarized in a Stack Overflow question that
+        explains why we've added the links to our Google webfonts here in the head
+        versus importing them into our stylesheets:
+        http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import
+    --!>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>

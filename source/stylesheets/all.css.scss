@@ -14,6 +14,7 @@
 //Smooths appearance of text
 html, html a {
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
@@ -42,24 +43,26 @@ Uses Neat span-columns to specify the number of columns an element should span.
 //Styles the appearance of the image and caption in a blog post.
 figure {
   @inlcude span-columns(6);
-  border-bottom: 1px solid $light-gray;
-  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $blue;
+  border-top: 1px solid $blue;
   padding: 2em 0;
   margin: 2em auto;
 
   .image {
     @include size(700px auto);
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.21);
+    box-shadow: 0 8px 7px -5px darken($light-gray, 10);
     border-radius: 10px;
     margin: 1em auto;
-    overflow: hidden
+    overflow: hidden;
   }
 
   figcaption {
-    color: $light-font-color;
+    color: $light-accent-color;
     font-family: $serif;
-    font-size: 1.1em;
+    font-style: italic;
+    font-size: 1.5em;
     text-align: center;
+    letter-spacing: normal;
     vertical-align: middle;
   }
 }
