@@ -11,20 +11,62 @@
         versus importing them into our stylesheets:
         http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import
     --!>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'> -->
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
 
   <body>
-    <%= partial "partials/navigation" %>
-    <div id="main" role="main">
-      <section>
+    <nav>
+      <%= link_to "Demo Blog", "/index.html", :class => "blog-title" %>
+      <ul>
+        <li>
+          <%= link_to "About", "/about.html" %>
+        </li>
+      </ul>
+    </nav>
+      <main>
         <%= yield %>
-      </section>
+      </main>
     </div>
-    <%= partial "partials/footer" %>
+    <footer>
+      <section>
+        <div class="col-three">
+          <h4>Recent Articles</h4>
+          <ol>
+            <% blog.articles[0...10].each do |article| %>
+              <li>
+                <%= article.date.strftime('%b %e') %>
+                <%= link_to article.title, article %>
+              </li>
+            <% end %>
+          </ol>
+        </div>
+
+        <div class="col-three">
+          <h4>Tags</h4>
+          <ol>
+            <% blog.tags.each do |tag, articles| %>
+              <li>
+                <%= link_to "#{tag} (#{articles.size})", tag_path(tag) %>
+              </li>
+            <% end %>
+          </ol>
+        </div>
+
+        <div class="col-three">
+          <h4>By Year</h4>
+          <ol>
+            <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+              <li>
+                <%= link_to "#{year} (#{articles.size})", blog_year_path(year) %>
+              </li>
+            <% end %>
+          </ol>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
