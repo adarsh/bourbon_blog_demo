@@ -1,12 +1,9 @@
 @charset "utf-8";
 
-//Libraries
 @import "bourbon";
 @import "bitters/bitters";
-@import "bitters/grid-settings";
 @import "neat";
 
-//Custom styles
 @import "partials/navigation";
 @import "partials/footer";
 @import "partials/index";
@@ -31,9 +28,10 @@ section {
   margin-top: 3em;
 }
 
-/*Structural helper for a three-column element layout. We'll use this in the foooter and possibly other places.
-
-Uses Neat span-columns to specify the number of columns an element should span.
+/*
+Structural helper for a three-column element layout. We'll use this in the
+foooter and possibly other places. Uses Neat span-columns to specify the number
+of columns an element should span.
 */
 
 .col-three {
@@ -42,7 +40,7 @@ Uses Neat span-columns to specify the number of columns an element should span.
 
 //Styles the appearance of the image and caption in a blog post.
 figure {
-  @inlcude span-columns(6);
+  @include span-columns(6);
   border-bottom: 1px solid $blue;
   border-top: 1px solid $blue;
   padding: 2em 0;

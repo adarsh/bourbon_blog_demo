@@ -1,22 +1,21 @@
 //Global navigation for the blog.
 
 nav {
-  background: $dark-gray;
+  @include position(fixed, 0px 0px 0 0);
+  border-bottom: 1px solid white;
   height: auto;
-  width: 100%;
-
-  section {
-    padding: 1em 0;
-    margin-top: 0;
-  }
+  padding: 1em;
+  width: auto;
+  z-index: 1;
 
   .blog-title {
     @include transition(all, .15s, linear);
+    color: #fff;
     display: inline-block;
     float: left;
     font-size: 2em;
     font-weight: 300;
-    color: #fff;
+    margin-right: 1.5em;
 
     &:hover {
       color: $light-gray;
@@ -55,11 +54,11 @@ nav {
 //Sets the header background image and positioning.
 
 .image-gradient {
-  background: url(http://goo.gl/SGztfO);
+  background-image: url('/images/papers.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: left;
   background-repeat: no-repeat;
-  padding: 20em;
+  padding: 17em;
   position: relative;
   width: 100%;
   display: table;
@@ -76,6 +75,7 @@ nav {
     p {
       background-color: transparentize(black, .6);
       border-radius: 10px;
+      border: 1px solid white;
       color: white;
       font-size: 1.4em;
       font-weight: 300;
