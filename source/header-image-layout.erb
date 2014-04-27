@@ -14,17 +14,15 @@
   </head>
 
   <body>
-    <div id="main" role="main">
-      <div class="image-container">
-        <div class="image-gradient">
-          <div class="overlay"></div>
-        </div>
+    <div class="image-container">
+      <div class="image-gradient">
+        <div class="overlay"></div>
       </div>
-    <section>
+    <main>
       <%= partial "partials/navigation" %>
       <%= yield %>
-    </section>
-    <%= partial "partials/footer" %>
+      <%= partial "partials/footer" %>
+    </main>
   </div>
   </body>
 </html>

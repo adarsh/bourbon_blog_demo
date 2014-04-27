@@ -20,12 +20,10 @@
   </head>
 
   <body>
+    <main>
     <%= partial "partials/navigation" %>
-    <div id="main" role="main">
-      <section>
-        <%= yield %>
-      </section>
-    </div>
+      <%= yield %>
     <%= partial "partials/footer" %>
+    </main>
   </body>
 </html>

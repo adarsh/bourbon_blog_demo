@@ -8,38 +8,29 @@
 @import "partials/footer";
 @import "partials/index";
 
-//Smooths appearance of text
 html, html a {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
-//Removes browser default margins from body.
 body {
-  background-color: #EECDCD;
+  background-color: #ABE3B4;
   margin: 0;
 }
 
-/* Centers the element in the viewport, clears its floats, and sets its max-width.
-http://neat.bourbon.io/docs/#outer-container */
-
-section {
+main {
   @include outer-container;
-  margin-top: 3em;
 }
 
-/*
-Structural helper for a three-column element layout. We'll use this in the
-foooter and possibly other places. Uses Neat span-columns to specify the number
-of columns an element should span.
-*/
+section {
+  margin-top: 3em;
+}
 
 .col-three {
   @include span-columns(4);
 }
 
-//Styles the appearance of the image and caption in a blog post.
 figure {
   @include span-columns(6);
   border-bottom: 1px solid $blue;

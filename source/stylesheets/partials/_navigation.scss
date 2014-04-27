@@ -1,5 +1,3 @@
-//Global navigation for the blog.
-
 nav {
   @include position(fixed, 0px 0px 0 0);
   border-bottom: 1px solid black;
@@ -51,18 +49,14 @@ nav {
   }
 }
 
-/* Styles from thoughtbot refills "Image Gradient Overlay" http://thoughtbot.github.io/refills. Defines styles for the header image on the index page. */
-
-//Sets the header background image and positioning.
-
 .image-gradient {
-  background-image: url('/images/just.jpg');
+  background-image: url('/images/sf.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 17em;
   position: relative;
-  opacity: .5;
+  opacity: .7;
   width: 100%;
   display: table;
   margin-bottom: $base-line-height;
